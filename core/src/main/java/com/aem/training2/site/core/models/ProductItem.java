@@ -1,11 +1,20 @@
 package com.aem.training2.site.core.models;
 
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.models.annotations.DefaultInjectionStrategy;
+import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
+@Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class ProductItem {
 
+    @ValueMapValue
     private String summary;
+
+    @ValueMapValue
     private String title;
+
+    @ValueMapValue
     private String rating;
 
     public String getSummary() {

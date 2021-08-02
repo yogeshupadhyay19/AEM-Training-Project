@@ -1,5 +1,5 @@
-<div data-sly-use.model="com.aem.training2.site.core.models.DemoModel">
-    <h1>${model.name}</h1>
+<p>Configure Product Component</p>
+<div data-sly-use.model="com.aem.training2.site.core.models.ProductModel">
     <h1>${model.path}</h1>
     <div data-sly-list =${model.list}>
         <li><b>Summary</b>:--- ${item.summary}</li>
@@ -7,4 +7,4 @@
         <li><b>Rating</b>:--${item.rating}</li>
 
         <li><b>Identifier</b>${item.identifier}</li>
-    </div>
+    </div></div>
