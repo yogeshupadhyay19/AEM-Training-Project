@@ -58,7 +58,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
 
-    private ResourceResolver getResourceResolver(String username) throws LoginException {
+    public ResourceResolver getResourceResolver(String username) throws LoginException {
         Log.debug("userid1:{}", username);
 
         final Map<String, Object> authInfo = new HashMap<String, Object>();

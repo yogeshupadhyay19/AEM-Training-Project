@@ -1,0 +1,18 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.all @ categories=['my-clientlib-category']}"/>
+<center> <h1> Pitney Bowes Login Form </h1> 
+    <form action="/bin/training" method="post" onsubmit="return submitUserForm();" >
+        <div class="container"> 
+            <label>Username : </label> 
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label>Password : </label> 
+            <input type="password" placeholder="Enter Password" name="password" required>
+			<div class="g-recaptcha" data-sitekey="6LeIhxIcAAAAAM0c-0Rk51p01HcqIhvLVa5J5tl5" data-callback="verifyCaptcha"></div>
+			<div id="g-recaptcha-error"></div>
+            <button type="submit">Login</button> 
+            <input type="checkbox" checked="checked"> Remember me 
+            <button type="button" class="cancelbtn"> Cancel</button> 
+            Forgot <a href="#"> password? </a> 
+        </div> 
+    </form> 
+    </center>

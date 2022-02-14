@@ -1,0 +1,9 @@
+<p>Configure Demo Custom Configuration Component</p>
+<div data-sly-use.model="com.aem.training2.site.core.models.OsgiConfigurationModel">
+    <h1>${model.serviceName}</h1>
+     <h1>${model.runModesChoose}</h1>
+
+    <div data-sly-list =${model.countriesName}>
+        <li><b>Countries</b>:---${item}</li>
+    </div>
+    </div>
